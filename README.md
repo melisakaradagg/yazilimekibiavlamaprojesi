@@ -1,41 +1,37 @@
 <div align="center">
-  <img src="https://img.shields.io/github/languages/count/keyvanarasteh/Project?style=flat-square&color=blueviolet" alt="Language Count">
-  <img src="https://img.shields.io/github/languages/top/keyvanarasteh/Project?style=flat-square&color=1e90ff" alt="Top Language">
-  <img src="https://img.shields.io/github/last-commit/keyvanarasteh/Project?style=flat-square&color=ff69b4" alt="Last Commit">
-  <img src="https://img.shields.io/github/license/keyvanarasteh/Project?style=flat-square&color=yellow" alt="License">
+  <img src="https://img.shields.io/github/languages/count/melisakaradagg/yazilimekibiavlamaprojesi?style=flat-square&color=blueviolet" alt="Language Count">
+  <img src="https://img.shields.io/github/languages/top/melisakaradagg/yazilimekibiavlamaprojesi?style=flat-square&color=1e90ff" alt="Top Language">
+  <img src="https://img.shields.io/github/last-commit/melisakaradagg/yazilimekibiavlamaprojesi?style=flat-square&color=ff69b4" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/melisakaradagg/yazilimekibiavlamaprojesi?style=flat-square&color=yellow" alt="License">
   <img src="https://img.shields.io/badge/Status-Active-green?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
 </div>
 
-# Project Name
-*Proje Adı*
+# software team hunting project
+*yazılım ekibi avlama projesi*
 
-A brief, engaging description of your project.  
-*Projenizin kısa ve ilgi çekici bir açıklaması.*
+This project was developed to identify some basic protocols and services used by software teams on the network. The aim is to listen to the traffic of services such as FTP, SSH, MySQL and SQL Server over certain ports and to create the necessary infrastructure to analyze and filter this traffic using the Python language.  
+*Bu proje, ağdaki yazılım ekipleri tarafından kullanılan bazı temel protokolleri ve servisleri tanımlamak için geliştirilmiştir. Amaç, FTP, SSH, MySQL ve SQL Server gibi servislerin trafiğini belirli portlar üzerinden dinlemek ve bu trafiği Python dili kullanılarak analiz etmek ve filtrelemek için gerekli altyapıyı oluşturmaktır.*
 
 ---
+Features / Özellikler
+Feature 1: List available network interfaces to let the user choose.
+Özellik 1: Kullanıcının seçebilmesi için mevcut ağ arayüzlerini listeler.
 
-## Features / *Özellikler*
+Feature 2: Capture packets for specific ports (FTP, SSH, MySQL, SQL Server).
+Özellik 2: Belirli portlar için (FTP, SSH, MySQL, SQL Server) ağ paketlerini yakalar.
 
-- **Feature 1:** Description of the feature.  
-  *Özellik 1: Özelliğin açıklaması.*
-- **Feature 2:** Another cool thing it does.  
-  *Özellik 2: Yaptığı başka bir harika şey.*
-- **Feature 3:** One more for good measure.  
-  *Özellik 3: Ve bir tane daha.*
-- Add more as they develop.  
-  *Geliştikçe daha fazla ekleyin.*
+Feature 3: Save captured packet summaries to a text file.
+Özellik 3: Yakalanan paket özetlerini bir metin dosyasına kaydeder.
+
+Feature 4: Show live packet capture results on the screen.
+Özellik 4: Canlı olarak ağdan gelen paketleri ekranda gösterir.
 
 ---
 
 ## Team / *Ekip*
 
-- **219*****031** - Name Surname: *Role or Contribution*  
-  *Ad Soyad: Rolü veya Katkısı*
-- **Another Member** - Name Surname: *Role or Contribution*  
-  *Ad Soyad: Rolü veya Katkısı*
-- Add more members as needed.  
-  *Gerektiğinde daha fazla üye ekleyin.*
+-2420191031 - Melisa KARADAĞ: Proje Sahibi / Project Owner 
 
 ---
 
@@ -124,9 +120,8 @@ Licensed under the [MIT License](LICENSE.md).
 ## Acknowledgements / *Teşekkürler* (Optional)
 
 Thanks to:  
-- Awesome Library: For enabling X.  
-- Inspiration Source.  
-- Special thanks to...  
+- Melisa KARADAĞ (karadagmelisa.mk@gmail.com)
+- Istinye University
 
 *Teşekkürler: Harika kütüphaneler ve ilham kaynakları için.*
 
@@ -134,10 +129,10 @@ Thanks to:
 
 ## Contact / *İletişim* (Optional)
 
-Project Maintainer: [Your Name/Org Name] - [your.email@example.com]  
+Project Maintainer: [Melisa KARADAĞ / Istinye University] - [Melisa KARADAĞ / Istinye University]  
 Found a bug? Open an issue.  
 
-*Proje Sorumlusu: [Adınız/Kuruluş Adınız] - [e-posta.adresiniz@ornek.com]. Hata bulursanız bir sorun bildirin.*
+*Proje Sorumlusu: [Melisa KARADAĞ / Istinye University] - [Melisa KARADAĞ / Istinye University]. Hata bulursanız bir sorun bildirin.*
 
 ---
 
