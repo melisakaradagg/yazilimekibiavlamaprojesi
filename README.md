@@ -11,6 +11,7 @@
 *Yazılım Ekibi Avlama Projesi*
 
 This project was developed to identify some basic protocols and services used by software teams on the network. The aim is to listen to the traffic of services such as FTP, SSH, MySQL and SQL Server over certain ports and to create the necessary infrastructure to analyze and filter this traffic using the Python language.  
+
 *Bu proje, ağdaki yazılım ekipleri tarafından kullanılan bazı temel protokolleri ve servisleri tanımlamak için geliştirilmiştir. Amaç, FTP, SSH, MySQL ve SQL Server gibi servislerin trafiğini belirli portlar üzerinden dinlemek ve bu trafiği Python dili kullanılarak analiz etmek ve filtrelemek için gerekli altyapıyı oluşturmaktır.*
 
 ---
