@@ -419,7 +419,7 @@ Wireshark • Go Deep, erişim tarihi Haziran 5, 2025, https://www.wireshark.org
 
 17.Wireshark - Filter for Inbound HTTP Requests on Port 80 Only - Server Fault, erişim tarihi Haziran 5, 2025, https://serverfault.com/questions/353952/wireshark-filter-for-inbound-http-requests-on-port-80-only
 
-18. Filtering Packets While Viewing - Wireshark, erişim tarihi Haziran 5, 2025, https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html
+18.Filtering Packets While Viewing - Wireshark, erişim tarihi Haziran 5, 2025, https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html
 SF16 - 16: Advanced Wireshark Display Filters (Betty DuBois) - YouTube, erişim tarihi Haziran 5, 2025, https://www.youtube.com/watch?v=EKPef0BFTQY
 
 19.Wireshark Tutorial: Display Filter Expressions - Palo Alto Networks Unit 42, erişim tarihi Haziran 5, 2025, https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/
