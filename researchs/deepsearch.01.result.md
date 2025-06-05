@@ -1,13 +1,15 @@
-*Bilgisayar Ağlarında Yazılımcı Tespiti için Wireshark Kullanımına Yönelik 'Developer Hunter' Projesi: 2025 ve Sonrası için En Etkili 10 Teknik ve Trend
-Yönetici Özeti*
+**Bilgisayar Ağlarında Yazılımcı Tespiti için Wireshark Kullanımına Yönelik 'Developer Hunter' Projesi: 2025 ve Sonrası için En Etkili 10 Teknik ve Trend
+Yönetici Özeti**
+
 Bu rapor, modern siber güvenlik ortamında yazılımcıların ağ davranışlarını tespit etmeye odaklanan 'Developer Hunter' projesinin kritik önemini vurgulamaktadır. Proje, Wireshark'ın gelişmiş yeteneklerini kullanarak yazılımcılara özgü ağ etkinliklerini (Git/SSH, IDE trafiği, geliştirme/test sunucusu erişimi, API test araçları, sanal makine/konteyner etkileşimleri, özel port/protokol kullanımları) analiz ederek ayırt edici dijital izlerini belirlemeyi amaçlamaktadır. Rapor, 2025 ve sonrasına yönelik en etkili 10 tekniği ve trendi derinlemesine incelemekte, şifrelenmiş trafiğin analizi, yapay zeka ve makine öğrenimi destekli davranışsal analizler, bulut tabanlı ve uzaktan çalışma ortamlarındaki zorluklar gibi konulara odaklanmaktadır. Ayrıca, etik ve yasal uyumluluğun bu tür projelerin başarısı için vazgeçilmez bir unsur olduğunun altını çizmektedir.
 
-1. Giriş: 'Developer Hunter' Projesinin Stratejik Gerekliliği
-Geliştirici Dijital Ayak İzlerini Tanımlama Zorluğu
+**1. Giriş: 'Developer Hunter' Projesinin Stratejik Gerekliliği**
+
+***Geliştirici Dijital Ayak İzlerini Tanımlama Zorluğu***
 
 'Developer Hunter' projesi, modern siber güvenlik ortamında kritik bir ihtiyacı karşılamaktadır: bir bilgisayar ağındaki yazılımcıların hassas bir şekilde tanımlanması ve izlenmesi. Yazılımcılar, rolleri gereği genellikle kritik fikri mülkiyete (kaynak kodu, tescilli algoritmalar), hassas verilere ve üretim altyapısına yüksek düzeyde erişime sahiptir. Bu ayrıcalıklı erişim, onları harici saldırganlar için potansiyel hedefler haline getirirken, daha da önemlisi, kötü niyetli veya kasıtsız iç tehditler için bir vektör oluşturmaktadır. Proje, yazılımcıların Git/SSH işlemleri, Entegre Geliştirme Ortamı (IDE) trafiği, geliştirme ve test sunucularına erişim, API test araçlarının kullanımı, sanal makineler ve konteynerlerle etkileşimler ve özel port veya protokol kullanımları gibi karakteristik ağ etkinliklerini derinlelemesine analiz ederek benzersiz dijital ayak izlerini belirlemeyi hedeflemektedir. Bu girişim, sadece teknik bir egzersiz olmanın ötesinde, bir kuruluşun ağ görünürlüğünü artırmak ve güvenlik duruşunu güçlendirmek için stratejik bir zorunluluktur.   
 
-Ağ Trafiği Analizinde Wireshark'ın Rolü
+***Ağ Trafiği Analizinde Wireshark'ın Rolü***
 
 Wireshark, ağ profesyonellerinin ve siber güvenlik uzmanlarının araç setinde temel ve vazgeçilmez bir araç olarak öne çıkmaktadır. Güçlü, açık kaynaklı bir ağ protokolü analizörü olarak, ağ trafiğini gerçek zamanlı olarak yakalama, inceleme ve etkileşimli olarak tarama konusunda eşsiz yetenekler sunar. Wireshark'ın temel gücü, her yakalanan paketi ayrıştırarak protokoller, başlıklar ve yükler hakkında mikroskobik düzeyde derinlemesine bilgi sunmasıdır. Bu ayrıntılı görünüm, ağ sorunlarını gidermek, iletişim kalıplarını anlamak ve güvenlik açıklarını veya tehditleri tespit etmek için paha biçilmezdir. Wireshark'ın açık kaynak yapısı ve binlerce ağ protokolüne sağladığı geniş destek, onu ağ yöneticileri, güvenlik uzmanları ve hatta yazılımcılar için vazgeçilmez bir varlık haline getirmektedir.   
 
@@ -15,12 +17,13 @@ Geliştirici faaliyetleri için "ağ çevresi" tanımının değişimi, bu proje
 
 'Developer Hunter' projesi, yalnızca reaktif sorun gidermenin ötesine geçerek proaktif bir güvenlik önlemi olarak konumlanmaktadır. Wireshark, ağ sorunlarını gidermek ve mevcut güvenlik açıklarını tespit etmek için yaygın olarak kullanılsa da , bu projenin amacı "yazılımcıları tespit etmek" ve "karakteristik ağ etkinliklerini" belirlemektir. Bu, genel anomali tespitinden belirli kullanıcı profillemesine doğru bir geçişi ifade etmektedir. Yazılımcıya özgü davranış kalıplarını proaktif olarak tanımlayarak, kuruluşlar "normal" geliştirici davranışları için temel referans çizgileri oluşturabilirler. Bu referans çizgileri, iç tehditleri, tehlikeye atılmış hesapları veya yetkisiz faaliyetleri gösterebilecek sapmaları tespit etmek için hayati öneme sahiptir. Bu yaklaşım, güvenliği ihlallere reaktif olarak yanıt vermekten, kritik kullanıcı gruplarını (yazılımcılar) proaktif olarak anlamaya ve güvence altına almaya kaydırmaktadır. Bu, sürekli izleme ve davranışsal analiz ihtiyacını vurgulamaktadır.   
 
-2. Ağ Keşfi için Temel Wireshark Yetenekleri
-Paket Yakalama ve Arayüz Seçimi
+**2. Ağ Keşfi için Temel Wireshark Yetenekleri**
+
+***Paket Yakalama ve Arayüz Seçimi***
 
 Herhangi bir Wireshark analizinin ilk adımı, uygulamayı başlatmak ve yakalama için uygun ağ arayüzünü seçmektir. Bu, fiziksel bir Ethernet adaptörü, bir Wi-Fi arayüzü veya bir sanal makine (VM) veya konteyner ile ilişkili bir sanal arayüz olabilir. Wireshark, Ağ Arayüz Kartını (NIC) karışık moda (promiscuous mode) alarak çalışır ve bu, yalnızca yerel makineye yönelik trafik değil, o arayüzden geçen tüm trafiği yakalamasına olanak tanır. Sanal makineler gibi sanallaştırılmış ortamlar için, Wireshark'ın ilgili trafiği yakalaması, VM'nin IP adresine giden veya gelen paketleri izlemek için özel filtreleme gerektirir.   
 
-Ekran ve Yakalama Filtrelerinde Uzmanlaşma: Sözdizimi ve En İyi Uygulamalar
+***Ekran ve Yakalama Filtrelerinde Uzmanlaşma: Sözdizimi ve En İyi Uygulamalar***
 
 Etkili analiz, alakasız verileri filtrelemeyi gerektirir. Wireshark, iki temel filtreleme mekanizması sunar:
 
@@ -28,7 +31,7 @@ Yakalama Filtreleri: Bu filtreler, paketler yakalama dosyasına (PCAP) yazılmad
 Ekran Filtreleri: Yakalamadan sonra uygulanır ve temel yakalama dosyasını değiştirmeden görüntülenen paketlerin etkileşimli olarak filtrelenmesine olanak tanır. Mantıksal operatörler (and, or, not) ve karşılaştırma operatörleri (==, !=, <, >) gibi daha ifade edici bir sözdizimi kullanırlar. 'Developer Hunter' projesi için temel ekran filtreleri, belirli protokolleri (ssh, http, mysql), portları (tcp.port == 22, tcp.port == 3306), IP adreslerini (ip.addr == <geliştirici_IP>) ve hatta yükler veya başlıklardaki dize eşleştirmelerini (http.user_agent contains "Mozilla", dns.qry.name contains "example.com", ssh.username == "admin") hedefleyecektir.   
 Wireshark'ın büyük hacimli trafik için "kaynak yoğun" olabileceği göz önüne alındığında , "gürültü" sorunu ve ön-filtreleme zorunluluğu ortaya çıkmaktadır. Karışık modda "tüm trafiği" yakalamak  ve ardından filtrelemek, özellikle yoğun bir ağda, verimsizdir ve paket kaybına veya sistem zorlanmasına yol açabilir. Ekran filtreleri güçlü olsa da, yakalama dosyasının boyutunu azaltmazlar. Bu nedenle, yazılımcı trafiğini etkili bir şekilde analiz etmek için, ilk veri hacmini yalnızca ilgili olanla sınırlamak amacıyla yakalama filtrelerinin uygulanmasına öncelik verilmelidir. Bu, yakalama öncesinde beklenen yazılımcı trafik kalıplarının güçlü bir şekilde anlaşılmasını gerektirir ve 'Developer Hunter' projesinin başarısı için bir ön koşuldur. Yazılımcı makinelerinin (MAC/IP/ana bilgisayar adı aracılığıyla) erken tespiti, geniş ağ çapında yakalamalar yerine hedeflenmiş yakalama filtrelerinin uygulanması için kritik öneme sahiptir.   
 
-İlk Ana Bilgisayar ve Cihaz Tanımlaması
+***İlk Ana Bilgisayar ve Cihaz Tanımlaması***
 
 Ağ keşfinde temel adım, trafiği oluşturan cihazları ve kullanıcıları tanımlamaktır. Bu, Dinamik Ana Bilgisayar Yapılandırma Protokolü (DHCP) trafiğini analiz ederek MAC adreslerini, IP adreslerini ve ana bilgisayar adlarını ilişkilendirmekle başlayabilir. Bir MAC adresinin ilk üç baytı genellikle bir satıcı kimliğine (OUI) çözümlenir ve bu, cihaz üreticisi hakkında ipuçları sağlayabilir (örneğin, Apple MacBook Pro). Microsoft Windows veya macOS ana bilgisayarlarının bulunduğu ortamlarda, NetBIOS Ad Hizmeti (NBNS) trafiği de ana bilgisayar adlarını tanımlamak için kullanılabilir. Şifrelenmemiş web trafiği için, HTTP istek başlıklarındaki User-Agent satırı işletim sistemini (OS) ve bazen cihaz modelini ortaya çıkarabilir. Ancak, bu yöntem User-Agent dizelerinin manipüle edilebileceği için dikkatli kullanılmalıdır. Active Directory (AD) ortamlarında, Kerberos trafiğindeki CNameString alanı incelenerek kullanıcı hesap adları belirlenebilir.   
 
