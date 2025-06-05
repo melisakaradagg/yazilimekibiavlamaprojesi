@@ -320,316 +320,147 @@ Etik ve Yasal Uyumluluk: Yazılımcı faaliyetlerinin izlenmesi, gizlilik endiş
 Uygulama ve Sürekli İzleme için Öncelikli Öneriler:
 
 1.***Kapsamlı Şifre Çözme Yetenekleri Geliştirin:***
+
 ***Eylem:*** Yazılımcı iş istasyonlarında ve kritik geliştirme sunucularında SSLKEYLOGFILE mekanizmalarının sistematik olarak uygulanmasını zorunlu kılın.
+
 ***Gerekçe:*** Bu, Git/HTTPS, IDE telemetrisi ve API çağrıları gibi şifreli geliştirici trafiğinin içeriğini incelemek için hayati öneme sahiptir, aksi takdirde bunlar kör noktalar olarak kalacaktır.
 
 2.**Bulut Tabanlı ve Uç Nokta Merkezli Yakalama Stratejilerini Benimseyin:**
+
 ***Eylem:*** Yalnızca çevre tabanlı yakalamalardan uzaklaşarak, yazılımcıların çalıştığı uzaktan sunuculara, VM'lere ve konteynerlere tshark veya özel araçlar (Kubeshark, Edgeshark) dağıtın.
+
 ***Gerekçe:*** Geliştirici faaliyetleri giderek dağıtılmış ve geçici hale gelmektedir; kapsamlı görünürlük, ilgili tüm uç noktalardan veri toplamasını gerektirir.
 
 3.**YZ/ML Destekli Davranışsal Analize Yatırım Yapın:**
+
 ***Eylem:*** Yazılımcıların "normal" ağ davranışları için temel referans çizgileri oluşturmak ve olağandışı veri aktarımları, erişim kalıpları veya mesai dışı faaliyetler gibi sapmaları tespit etmek için YZ/ML destekli NDR çözümlerini uygulayın.
+
 ***Gerekçe:*** Bu, iç tehditleri, tehlikeye atılmış hesapları ve sıfır gün istismarlarını proaktif olarak tanımlamak için ölçeklenebilir ve dinamik bir yaklaşım sağlar.
 
 4.**Wireshark Analizini Otomatikleştirin:**
+
 ***Eylem:*** Büyük hacimli PCAP dosyalarını verimli bir şekilde işlemek, özel tespit mantığı oluşturmak ve diğer güvenlik araçlarıyla entegrasyon için tshark ve PyShark gibi araçlarla betikleme yeteneklerini geliştirin.
+
 ***Gerekçe:*** Otomasyon, manuel incelemenin sınırlamalarını aşar ve güvenlik analistlerinin daha yüksek değerli tehdit avcılığı ve olay müdahalesi görevlerine odaklanmasını sağlar.
 
 5.**Kapsamlı Bir Güvenlik Ekosistemiyle Entegre Olun:**
+
 ***Eylem:*** Wireshark'tan elde edilen PCAP'ların ve uyarıların SIEM, NDR ve EDR platformlarına sorunsuz bir şekilde alınmasını ve korelasyonunu sağlayın.
+
 ***Gerekçe:*** Bu entegrasyon, olay müdahalesini hızlandırır, tehdit avcılığını geliştirir ve ağ, uç nokta ve günlük verilerini birleştirerek bütünsel bir güvenlik görünümü sağlar.
 
 6.**Özel Protokol ve Olağandışı Port Kullanımını İzleyin:**
+
 ***Eylem:*** Yazılımcıların kullandığı standart olmayan portları ve özel uygulama protokollerini aktif olarak arayın. Bilinmeyen protokolleri ayrıştırmak için Wireshark'ın "Çözümle" özelliğini ve Lua tabanlı özel ayrıştırıcıları kullanın.
+
 ***Gerekçe:*** Bu kalıplar, meşru geliştirme iş akışlarının bir parçası olabileceği gibi, aynı zamanda veri sızdırma veya gizlenmiş C2 iletişimleri için de kullanılabilir.
 
 7.**Gelişen DNS Protokollerini (DoH/DoT) Göz Önünde Bulundurun:**
+
 ***Eylem:*** Şifreli DNS trafiğini tespit etmek ve analiz etmek için özel filtreler geliştirin. DoH'yi diğer HTTPS trafiğinden ayırt etmek için paket boyutu ve  HTTP kalıpları gibi meta veri analizine odaklanın.
+
 ***Gerekçe:*** Şifreli DNS, geleneksel DNS tabanlı tehdit tespitini atlayabilir ve ağ görünürlüğünde bir kör nokta oluşturabilir.
 
 8.**Sürekli Yasal ve Etik Uyum Sağlayın:**
+
 ***Eylem:*** İzleme uygulamaları hakkında yazılımcılarla şeffaf bir iletişim politikası oluşturun ve sürdürün. Veri toplamanın kapsamını meşru iş amaçlarıyla sınırlayın ve tüm ilgili veri koruma yasalarına (örneğin, GDPR) uyun.
+
 ***Gerekçe:*** Güven oluşturmak, olumsuz çalışan moralini önlemek ve yasal sonuçlardan kaçınmak, projenin uzun vadeli başarısı için kritik öneme sahiptir.
 
 9.**Sürekli Eğitim ve Yetenek Gelişimi:**
+
 ***Eylem:*** Güvenlik ve geliştirme ekipleri için gelişmiş Wireshark kullanımı, YZ/ML tabanlı analiz ve bulut tabanlı ağ forensiği konularında düzenli eğitimler sağlayın.
+
 ***Gerekçe:*** Ağ ortamının karmaşıklığı ve tehditlerin gelişimi, sürekli öğrenmeyi ve uyarlamayı gerektirmektedir.
 
 10.**Proaktif Tehdit Avcılığı Yaklaşımını Benimseyin:**
+
 ***Eylem:*** 'Developer Hunter' projesini, yazılımcı faaliyetleri için bir "normal" temel çizgi oluşturmaya odaklanan, sürekli ve proaktif bir tehdit avcılığı programının temel bir bileşeni olarak konumlandırın.
+
 ***Gerekçe:*** Reaktif olay müdahalesinden proaktif tehdit tespitine geçiş, kuruluşun genel güvenlik duruşunu önemli ölçüde güçlendirecektir.
 Bu önerilerin uygulanması, kuruluşların yazılımcıların dijital ayak izlerini etkili bir şekilde tespit etmelerini, fikri mülkiyeti korumalarını ve 2025 ve sonrasında gelişen siber tehdit ortamında iç tehditleri azaltmalarını sağlayacaktır.
 
 
-Raporda kullanılan kaynaklar
-
-unit42.paloaltonetworks.com
-Wireshark Tutorial: Identifying Hosts and Users - Palo Alto Networks Unit 42
-Yeni pencerede açılır
-
-reddit.com
-How to find type of a device and its behavior within the network? : r/wireshark - Reddit
-Yeni pencerede açılır
-
-lenovo.com
-Wireshark Essentials: Mastering Network Traffic Analysis | Lenovo US
-Yeni pencerede açılır
-
-securemyorg.com
-Mastering Wireshark: The Ultimate Guide to Network Traffic Analysis -SecureMyOrg
-Yeni pencerede açılır
-
-syteca.com
-Employee Monitoring Ethics: 8 Best Practices for Organizations - Syteca
-Yeni pencerede açılır
-
-teramind.co
-Employee Monitoring: Ethical Guidelines for Employers - Teramind
-Yeni pencerede açılır
-
-moldstud.com
-Implementing Network Traffic Analysis for Effective Threat Detection - MoldStud
-Yeni pencerede açılır
-
-comparitech.com
-Network Trends & Predictions with AI and GenAI in 2025 - Comparitech
-Yeni pencerede açılır
-
-open200.com
-Using Wireshark to analyze TLS encrypted traffic | Open200
-Yeni pencerede açılır
-
-youtube.com
-SF16 - 16: Advanced Wireshark Display Filters (Betty DuBois) - YouTube
-Yeni pencerede açılır
-
-10xsheets.com
-16 Best Network Monitoring Tools in 2025 - 10XSheets
-Yeni pencerede açılır
-
-uptrace.dev
-Top 10 Network Monitoring Tools for 2025: Enhance Your Network Performance - Uptrace
-Yeni pencerede açılır
-
-dzone.com
-Beyond Microservices: The Emerging Post-Monolith Architecture for 2025 - DZone
-Yeni pencerede açılır
-
-nucamp.co
-Microservices Architecture in 2025: Designing Scalable and Maintainable Applications
-Yeni pencerede açılır
-
-sentinelone.com
-9 Cloud Native Security Tools For 2025 - SentinelOne
-Yeni pencerede açılır
-
-cloudnativenow.com
-F5 Extends Ability to Scale and Secure Network Traffic Across Kubernetes Clusters
-Yeni pencerede açılır
-
-youtube.com
-Compare SSH and Telnet with Wireshark - YouTube
-Yeni pencerede açılır
-
-geeksforgeeks.org
-Steps of Filtering While Capturing in Wireshark - GeeksforGeeks
-Yeni pencerede açılır
-
-fastercapital.com
-Monitoring And Updating Your Intellectual Property Strategy - FasterCapital
-Yeni pencerede açılır
-
-isms.online
-ISO 27001:2022 Annex A 8.16 – Monitoring Activities - ISMS.online
-Yeni pencerede açılır
-
-labex.io
-How to Filter and Search for Specific Network Traffic in Wireshark - LabEx
-Yeni pencerede açılır
-
-sysdig.com
-Optimizing Wireshark in Kubernetes - Sysdig
-Yeni pencerede açılır
-
-labex.io
-How to analyze Cybersecurity network traffic with Wireshark CLI - LabEx
-Yeni pencerede açılır
-
-bluegoatcyber.com
-Network Traffic Analysis with Wireshark - Blue Goat Cyber
-Yeni pencerede açılır
-
-wireshark.org
-Wireshark • Go Deep
-Yeni pencerede açılır
-
-traceable.ai
-What is Network Traffic Analysis? - Traceable AI
-Yeni pencerede açılır
-
-philarchive.org
-Enhancing Security of Cloud-Native Microservices with Service Mesh Technologies - PhilArchive
-Yeni pencerede açılır
-
-unit42.paloaltonetworks.com
-Wireshark Tutorial: Decrypting HTTPS Traffic - Palo Alto Networks Unit 42
-Yeni pencerede açılır
-
-labex.io
-Analyze Network Traffic with Wireshark Display Filters - LabEx
-Yeni pencerede açılır
-
-zenarmor.com
-Beginner's Guide to Wireshark - zenarmor.com
-Yeni pencerede açılır
-
-buoyant.io
-Linkerd vs Istio, a service mesh comparison - Buoyant.io
-Yeni pencerede açılır
-
-serverfault.com
-How can I sniff the traffic of remote machine with wireshark? - Server Fault
-Yeni pencerede açılır
-
-unit42.paloaltonetworks.com
-Wireshark Tutorial: Display Filter Expressions - Palo Alto Networks Unit 42
-Yeni pencerede açılır
-
-wiki.wireshark.org
-SSH - Wireshark Wiki
-Yeni pencerede açılır
-
-stackoverflow.com
-How to use wireshark to capture mysql query sql clearly - Stack ...
-Yeni pencerede açılır
-
-traceable.ai
-What is Network Traffic Analysis? - Traceable - Blog
-Yeni pencerede açılır
-
-socwise.eu
-The power of AI and ML in network traffic analysis: next generation ...
-Yeni pencerede açılır
-
-forums.docker.com
-[HOWTO] Capture the communication of and inside a Docker ...
-Yeni pencerede açılır
-
-labex.io
-How to use advanced display filters in Wireshark for complex ...
-Yeni pencerede açılır
-
-dev.to
-Kubeshark: The Wireshark For Kubernetes - DEV Community
-Yeni pencerede açılır
-
-fidelissecurity.com
-Digital Forensics for Insider Threats Detection and Response ...
-Yeni pencerede açılır
-
-labex.io
-How to detect network security threats using Wireshark in ... - LabEx
-Yeni pencerede açılır
-
-wiki.wireshark.org
-TLS - Wireshark Wiki
-Yeni pencerede açılır
-
-labex.io
-How to filter network traffic based on protocol, port, and HTTP method in Wireshark for Cybersecurity | LabEx
-Yeni pencerede açılır
-
-provendata.com
-What is Network Forensics? - Proven Data
-Yeni pencerede açılır
-
-salvationdata.com
-Key Trends in Digital Forensics 2025: Chanllenges ... - SalvationDATA
-Yeni pencerede açılır
-
-oxygenforensics.com
-Key Trends Shaping the Future of Digital Forensics in 2025
-Yeni pencerede açılır
-
-github.com
-KimiNewt/pyshark: Python wrapper for tshark, allowing python packet parsing using wireshark dissectors - GitHub
-Yeni pencerede açılır
-
-exabeam.com
-How Network Monitoring Detects Insider Threats and Compromised Devices - Exabeam
-Yeni pencerede açılır
-
-searchinform.com
-SIEM Threat Hunting: Comprehensive Guide - SearchInform
-Yeni pencerede açılır
-
-bejamas.com
-A comprehensive guide to serverless monitoring and debugging - Bejamas
-Yeni pencerede açılır
-
-lumigo.io
-Serverless Monitoring Guide - Lumigo
-Yeni pencerede açılır
-
-superuser.com
-How to verify that you're using DNS over HTTPS (DoH) with Quad9 / other non Cloudflare DNS providers - Super User
-Yeni pencerede açılır
-
-geeksforgeeks.org
-What is Control Protocol Dissection in Wireshark? - GeeksforGeeks
-Yeni pencerede açılır
-
-essay.utwente.nl
-Detection of HTTPS Encrypted DNS Traffic - University of Twente Student Theses
-Yeni pencerede açılır
-
-insanecyber.com
-Threat Hunting with Pyshark: Using Open Source Python Libraries to ...
-Yeni pencerede açılır
-
-muazzamali.wordpress.com
-Capturing SOAP messages using wireshark - Muazzam Ali's Blog - WordPress.com
-Yeni pencerede açılır
-
-mikehadlow.blogspot.com
-Capturing and playing back web service calls with Wireshark and SoapUI - Code rant
-Yeni pencerede açılır
-
-learning.postman.com
-Capture HTTP requests in Postman | Postman Docs
-Yeni pencerede açılır
-
-gist.github.com
-wireshark filters - GitHub Gist
-Yeni pencerede açılır
-
-yasirbhutta.github.io
-Wireshark Filters Guide Protocol & IP Analysis - Learn with Yasir
-Yeni pencerede açılır
-
-qacafe.com
-Sample captures for QUIC, DoH, CommunityID, WPA3 and other protocols in CloudShark 3.10 - QA Cafe
-Yeni pencerede açılır
-
-superuser.com
-Filter all packages that not use a specific port - wireshark - Super User
-Yeni pencerede açılır
-
-serverfault.com
-Wireshark - Filter for Inbound HTTP Requests on Port 80 Only - Server Fault
-Yeni pencerede açılır
-
-kings-guard.com
-How Is Wireshark Used in Cybersecurity?
-Yeni pencerede açılır
-
-aws.amazon.com
-Monitoring network traffic in AWS Lambda functions | AWS Compute Blog
-Yeni pencerede açılır
-
-wireshark.org
-6.3. Filtering Packets While Viewing - Wireshark
-Yeni pencerede açılır
-
-stackoverflow.com
-How can I add a custom protocol analyzer to wireshark? - Stack Overflow
+***Raporda kullanılan kaynaklar***
+
+1.Digital Forensics for Insider Threats Detection and Response ..., erişim tarihi Haziran 5, 2025, https://fidelissecurity.com/threatgeek/threat-detection-response/digital-forensics-for-insider-threats-in-it-environments/
+
+2.Wireshark Essentials: Mastering Network Traffic Analysis | Lenovo US, erişim tarihi Haziran 5, 2025, https://www.lenovo.com/us/en/glossary/wireshark/
+Mastering Wireshark: The Ultimate Guide to Network Traffic Analysis -SecureMyOrg, erişim tarihi Haziran 5, 2025, https://securemyorg.com/2024/12/31/mastering-wireshark-securemyorg/
+
+3.Beginner's Guide to Wireshark - zenarmor.com, erişim tarihi Haziran 5, 2025, https://www.zenarmor.com/docs/network-basics/what-is-wireshark
+
+4.Network Traffic Analysis with Wireshark - Blue Goat Cyber, erişim tarihi Haziran 5, 2025, https://bluegoatcyber.com/blog/what-is-wireshark/
+
+5.How to use advanced display filters in Wireshark for complex ..., erişim tarihi Haziran 5, 2025, https://labex.io/tutorials/wireshark-how-to-use-advanced-display-filters-in-wireshark-for-complex-network-traffic-analysis-in-cybersecurity-415201
+
+6.How Is Wireshark Used in Cybersecurity?, erişim tarihi Haziran 5, 2025, https://kings-guard.com/how-is-wireshark-used-in-cybersecurity/
+Wireshark • Go Deep, erişim tarihi Haziran 5, 2025, https://www.wireshark.org/
+
+8.9 Cloud Native Security Tools For 2025 - SentinelOne, erişim tarihi Haziran 5, 2025, https://www.sentinelone.com/cybersecurity-101/cloud-security/cloud-native-security-tools/
+
+9.F5 Extends Ability to Scale and Secure Network Traffic Across Kubernetes Clusters, erişim tarihi Haziran 5, 2025, https://cloudnativenow.com/features/f5-extends-ability-to-scale-and-secure-network-traffic-across-kubernetes-clusters/
+
+10.Beyond Microservices: The Emerging Post-Monolith Architecture for 2025 - DZone, erişim tarihi Haziran 5, 2025, https://dzone.com/articles/post-monolith-architecture-2025
+
+11.Microservices Architecture in 2025: Designing Scalable and Maintainable Applications, erişim tarihi Haziran 5, 2025, https://www.nucamp.co/blog/coding-bootcamp-full-stack-web-and-mobile-development-2025-microservices-architecture-in-2025-designing-scalable-and-maintainable-applications
+
+12.16 Best Network Monitoring Tools in 2025 - 10XSheets, erişim tarihi Haziran 5, 2025, https://www.10xsheets.com/blog/best-network-monitoring-tools/
+
+13.Top 10 Network Monitoring Tools for 2025: Enhance Your Network Performance - Uptrace, erişim tarihi Haziran 5, 2025, https://uptrace.dev/tools/network-monitoring-tools
+
+14.Analyze Network Traffic with Wireshark Display Filters - LabEx, erişim tarihi Haziran 5, 2025, https://labex.io/tutorials/wireshark-analyze-network-traffic-with-wireshark-display-filters-415944
+
+wireshark filters - GitHub Gist, erişim tarihi Haziran 5, 2025, https://gist.github.com/githubfoam/08efac0343f98bd727caa32e6c81f655
+Steps of Filtering While Capturing in Wireshark - GeeksforGeeks, erişim tarihi Haziran 5, 2025, https://www.geeksforgeeks.org/steps-of-filtering-while-capturing-in-wireshark/
+How to Filter and Search for Specific Network Traffic in Wireshark - LabEx, erişim tarihi Haziran 5, 2025, https://labex.io/questions/how-to-filter-and-search-for-specific-network-traffic-in-wireshark-288913
+Wireshark - Filter for Inbound HTTP Requests on Port 80 Only - Server Fault, erişim tarihi Haziran 5, 2025, https://serverfault.com/questions/353952/wireshark-filter-for-inbound-http-requests-on-port-80-only
+6.3. Filtering Packets While Viewing - Wireshark, erişim tarihi Haziran 5, 2025, https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html
+SF16 - 16: Advanced Wireshark Display Filters (Betty DuBois) - YouTube, erişim tarihi Haziran 5, 2025, https://www.youtube.com/watch?v=EKPef0BFTQY
+Wireshark Tutorial: Display Filter Expressions - Palo Alto Networks Unit 42, erişim tarihi Haziran 5, 2025, https://unit42.paloaltonetworks.com/using-wireshark-display-filter-expressions/
+How to filter network traffic based on protocol, port, and HTTP method in Wireshark for Cybersecurity | LabEx, erişim tarihi Haziran 5, 2025, https://labex.io/tutorials/wireshark-how-to-filter-network-traffic-based-on-protocol-port-and-http-method-in-wireshark-for-cybersecurity-415199
+Wireshark Filters Guide Protocol & IP Analysis - Learn with Yasir, erişim tarihi Haziran 5, 2025, https://yasirbhutta.github.io/wireshark/
+Wireshark Tutorial: Identifying Hosts and Users - Palo Alto Networks Unit 42, erişim tarihi Haziran 5, 2025, https://unit42.paloaltonetworks.com/using-wireshark-identifying-hosts-and-users/
+How to find type of a device and its behavior within the network? : r/wireshark - Reddit, erişim tarihi Haziran 5, 2025, https://www.reddit.com/r/wireshark/comments/1fh827g/how_to_find_type_of_a_device_and_its_behavior/
+Filter all packages that not use a specific port - wireshark - Super User, erişim tarihi Haziran 5, 2025, https://superuser.com/questions/867560/filter-all-packages-that-not-use-a-specific-port
+SSH - Wireshark Wiki, erişim tarihi Haziran 5, 2025, https://wiki.wireshark.org/SSH
+Compare SSH and Telnet with Wireshark - YouTube, erişim tarihi Haziran 5, 2025, https://www.youtube.com/watch?v=t0iHo90iqKs
+Using Wireshark to analyze TLS encrypted traffic | Open200, erişim tarihi Haziran 5, 2025, https://www.open200.com/post/using-wireshark-to-analyze-tls-encrypted-traffic
+TLS - Wireshark Wiki, erişim tarihi Haziran 5, 2025, https://wiki.wireshark.org/TLS
+Wireshark Tutorial: Decrypting HTTPS Traffic - Palo Alto Networks Unit 42, erişim tarihi Haziran 5, 2025, https://unit42.paloaltonetworks.com/wireshark-tutorial-decrypting-https-traffic/
+The power of AI and ML in network traffic analysis: next generation ..., erişim tarihi Haziran 5, 2025, https://socwise.eu/the-power-of-ai-and-ml-in-network-traffic-analysis-next-generation-ndr-solutions/
+Implementing Network Traffic Analysis for Effective Threat Detection - MoldStud, erişim tarihi Haziran 5, 2025, https://moldstud.com/articles/p-implementing-network-traffic-analysis-for-threat-detection
+How can I sniff the traffic of remote machine with wireshark? - Server Fault, erişim tarihi Haziran 5, 2025, https://serverfault.com/questions/362529/how-can-i-sniff-the-traffic-of-remote-machine-with-wireshark
+How can I add a custom protocol analyzer to wireshark? - Stack Overflow, erişim tarihi Haziran 5, 2025, https://stackoverflow.com/questions/4904991/how-can-i-add-a-custom-protocol-analyzer-to-wireshark
+Employee Monitoring Ethics: 8 Best Practices for Organizations - Syteca, erişim tarihi Haziran 5, 2025, https://www.syteca.com/en/blog/employee-monitoring-ethics-best-practices
+Key Trends Shaping the Future of Digital Forensics in 2025, erişim tarihi Haziran 5, 2025, https://www.oxygenforensics.com/en/resources/digital-forensics-trends-2025/
+Capture HTTP requests in Postman | Postman Docs, erişim tarihi Haziran 5, 2025, https://learning.postman.com/docs/sending-requests/capturing-request-data/capturing-http-requests/
+Capturing SOAP messages using wireshark - Muazzam Ali's Blog - WordPress.com, erişim tarihi Haziran 5, 2025, https://muazzamali.wordpress.com/2014/10/22/capturing-soap-messages-using-wireshark/
+Capturing and playing back web service calls with Wireshark and SoapUI - Code rant, erişim tarihi Haziran 5, 2025, http://mikehadlow.blogspot.com/2009/01/capturing-and-playing-back-web-service.html
+How to use wireshark to capture mysql query sql clearly - Stack ..., erişim tarihi Haziran 5, 2025, https://stackoverflow.com/questions/38167587/how-to-use-wireshark-to-capture-mysql-query-sql-clearly
+Enhancing Security of Cloud-Native Microservices with Service Mesh Technologies - PhilArchive, erişim tarihi Haziran 5, 2025, https://philarchive.org/archive/SIDESO
+Monitoring And Updating Your Intellectual Property Strategy - FasterCapital, erişim tarihi Haziran 5, 2025, https://fastercapital.com/topics/monitoring-and-updating-your-intellectual-property-strategy.html/1
+ISO 27001:2022 Annex A 8.16 – Monitoring Activities - ISMS.online, erişim tarihi Haziran 5, 2025, https://www.isms.online/iso-27001/annex-a/8-16-monitoring-activities-2022/
+What is Network Forensics? - Proven Data, erişim tarihi Haziran 5, 2025, https://www.provendata.com/blog/what-is-network-forensics/
+Optimizing Wireshark in Kubernetes - Sysdig, erişim tarihi Haziran 5, 2025, https://sysdig.com/blog/optimizing-wireshark-in-kubernetes/
+[HOWTO] Capture the communication of and inside a Docker ..., erişim tarihi Haziran 5, 2025, https://forums.docker.com/t/howto-capture-the-communication-of-and-inside-a-docker-container-using-wireshark-with-edgeshark-plugin/139440
+Kubeshark: The Wireshark For Kubernetes - DEV Community, erişim tarihi Haziran 5, 2025, https://dev.to/thenjdevopsguy/kubeshark-the-wireshark-for-kubernetes-3a72
+Linkerd vs Istio, a service mesh comparison - Buoyant.io, erişim tarihi Haziran 5, 2025, https://www.buoyant.io/linkerd-vs-istio
+What is Control Protocol Dissection in Wireshark? - GeeksforGeeks, erişim tarihi Haziran 5, 2025, https://www.geeksforgeeks.org/what-is-control-protocol-dissection-in-wireshark/
+How to verify that you're using DNS over HTTPS (DoH) with Quad9 / other non Cloudflare DNS providers - Super User, erişim tarihi Haziran 5, 2025, https://superuser.com/questions/1708212/how-to-verify-that-youre-using-dns-over-https-doh-with-quad9-other-non-clou
+Detection of HTTPS Encrypted DNS Traffic - University of Twente Student Theses, erişim tarihi Haziran 5, 2025, https://essay.utwente.nl/82085/1/Nijeboer_BA_EEMCS.pdf
+Sample captures for QUIC, DoH, CommunityID, WPA3 and other protocols in CloudShark 3.10 - QA Cafe, erişim tarihi Haziran 5, 2025, https://www.qacafe.com/resources/sample-captures-for-quic-doh-communityid-wpa3-cloudshark-3-10
+Employee Monitoring: Ethical Guidelines for Employers - Teramind, erişim tarihi Haziran 5, 2025, https://www.teramind.co/blog/employee-monitoring-ethics/
+Network Trends & Predictions with AI and GenAI in 2025 - Comparitech, erişim tarihi Haziran 5, 2025, https://www.comparitech.com/net-admin/ai-genai-network-trends/
+What is Network Traffic Analysis? - Traceable AI, erişim tarihi Haziran 5, 2025, https://www.traceable.ai/blog-post/network-traffic-analysis
+What is Network Traffic Analysis? - Traceable - Blog, erişim tarihi Haziran 5, 2025, https://traceable.ai/blog-post/network-traffic-analysis
+Threat Hunting with Pyshark: Using Open Source Python Libraries to ..., erişim tarihi Haziran 5, 2025, https://insanecyber.com/threat-hunting-with-pyshark/
+How to analyze Cybersecurity network traffic with Wireshark CLI - LabEx, erişim tarihi Haziran 5, 2025, https://labex.io/tutorials/wireshark-how-to-analyze-cybersecurity-network-traffic-with-wireshark-cli-415094
+KimiNewt/pyshark: Python wrapper for tshark, allowing python packet parsing using wireshark dissectors - GitHub, erişim tarihi Haziran 5, 2025, https://github.com/KimiNewt/pyshark
+How to detect network security threats using Wireshark in ... - LabEx, erişim tarihi Haziran 5, 2025, https://labex.io/tutorials/wireshark-how-to-detect-network-security-threats-using-wireshark-in-cybersecurity-415263
+How Network Monitoring Detects Insider Threats and Compromised Devices - Exabeam, erişim tarihi Haziran 5, 2025, https://www.exabeam.com/blog/security-operations-center/insider-threats-and-compromised-devices-how-network-monitoring-uncovers-security-blind-spots/
+SIEM Threat Hunting: Comprehensive Guide - SearchInform, erişim tarihi Haziran 5, 2025, https://searchinform.com/cybersecurity/measures/siem/use-cases/threat-hunting/
+A comprehensive guide to serverless monitoring and debugging - Bejamas, erişim tarihi Haziran 5, 2025, https://bejamas.com/hub/guides/comprehensive-guide-to-serverless-monitoring-and-debugging
+Serverless Monitoring Guide - Lumigo, erişim tarihi Haziran 5, 2025, https://lumigo.io/serverless-monitoring-guide/
+Monitoring network traffic in AWS Lambda functions | AWS Compute Blog, erişim tarihi Haziran 5, 2025, https://aws.amazon.com/blogs/compute/monitoring-network-traffic-in-aws-lambda-functions/
+Key Trends in Digital Forensics 2025: Chanllenges ... - SalvationDATA, erişim tarihi Haziran 5, 2025, https://www.salvationdata.com/knowledge/key-trends-in-digital-forensics-for-2025/
